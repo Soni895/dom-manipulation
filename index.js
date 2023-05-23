@@ -64,14 +64,17 @@ let tag=alltag[2];
 // content.addEventListener('click',function(event){event.preventDefault();
 //      console.log("not allowed illegal action deny")});
 
-function para_print(i)
-    {
-        console.log("inside the event listner"+i);
-    }
 
-    function para_print1()
+
+
+// function para_print(i)
+//     {
+//         console.log("inside the event listner",i);
+//     }
+
+    function para_print1(event)
     {
-        console.log("inside the event listner");
+        console.log("inside the event listner"+event.target.textContent);
     }
 
 
@@ -87,7 +90,8 @@ for(let i=0;i<100;i++)
 
      // add listner to para;
 
-    // para.addEventListener('click',para_print);
+    // para.addEventListener('click',function(){
+    // para_print(i)});
     mydiv.appendChild(para);
 
 }
