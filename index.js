@@ -42,7 +42,7 @@ function print()
     console.log("hi darshan soni");
 }
 // const content=document.querySelector(".Name");
-// content.addEventListener('click',funtion(event)
+// content.addEventListener('click',function(event)
 // {
 //     console.log(event);
 // });
