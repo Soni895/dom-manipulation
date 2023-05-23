@@ -64,18 +64,31 @@ let tag=alltag[2];
 // content.addEventListener('click',function(event){event.preventDefault();
 //      console.log("not allowed illegal action deny")});
 
+function para_print(i)
+    {
+        console.log("inside the event listner"+i);
+    }
 
-let mydiv=document.createElement("div");
+    function para_print1()
+    {
+        console.log("inside the event listner");
+    }
+
+
+    let mydiv=document.createElement("div");
+//    add listner to div
+mydiv.addEventListener('click',para_print1);
+
+
 for(let i=0;i<100;i++)
 {
     let para=document.createElement('p');
     para.textContent="this is para no:-"+i;
 
-    para.addEventListener('click',function()
-    {
-        console.log("inside the event listner");
-    });
+     // add listner to para;
+
+    // para.addEventListener('click',para_print);
     mydiv.appendChild(para);
 
 }
-document.appendChild(mydiv);
+document.body.appendChild(mydiv);
