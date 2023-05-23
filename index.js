@@ -54,9 +54,28 @@ document.removeEventListener('click',print);
 // the default action
 let alltag=document.querySelectorAll("a");
 let tag=alltag[2];
-tag.addEventListener('click',function(event)
-{
-    event.preventDefault();
-    console.log("not allowed illegal action deny");
+// tag.addEventListener('click',function(event)
+// {
+//     event.preventDefault();
+//     console.log("not allowed illegal action deny");
 
-});
+// });
+
+// content.addEventListener('click',function(event){event.preventDefault();
+//      console.log("not allowed illegal action deny")});
+
+
+let mydiv=document.createElement("div");
+for(let i=0;i<100;i++)
+{
+    let para=document.createElement('p');
+    para.textContent="this is para no:-"+i;
+
+    para.addEventListener('click',function()
+    {
+        console.log("inside the event listner");
+    });
+    mydiv.appendChild(para);
+
+}
+document.appendChild(mydiv);
