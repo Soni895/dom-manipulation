@@ -51,3 +51,12 @@ function print()
 
 document.removeEventListener('click',print);
 
+// the default action
+let alltag=document.querySelectorAll("a");
+let tag=alltag[2];
+tag.addEventListener('click',function(event)
+{
+    event.preventDefault();
+    console.log("not allowed illegal action deny");
+
+});
