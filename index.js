@@ -83,16 +83,16 @@ let tag=alltag[2];
 mydiv.addEventListener('click',para_print1);
 
 
-// for(let i=0;i<100;i++)
-// {
-//     let para=document.createElement('p');
-//     para.textContent="this is para no:-"+i;
+for(let i=0;i<100;i++)
+{
+    let para=document.createElement('p');
+    para.textContent="this is para no:-"+i;
 
-//      // add listner to para;
+     // add listner to para;
 
-//     // para.addEventListener('click',function(){
-//     // para_print(i)});
-//     mydiv.appendChild(para);
+    // para.addEventListener('click',function(){
+    // para_print(i)});
+    mydiv.appendChild(para);
 
-// }
-// document.body.appendChild(mydiv);
+}
+document.body.appendChild(mydiv);
