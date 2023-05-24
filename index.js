@@ -90,8 +90,8 @@ for(let i=0;i<100;i++)
 
      // add listner to para;
 
-    // para.addEventListener('click',function(){
-    // para_print(i)});
+    para.addEventListener('click',function(){
+    para_print(i)});
     mydiv.appendChild(para);
 
 }
