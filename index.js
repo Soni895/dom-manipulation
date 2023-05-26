@@ -85,8 +85,14 @@ alltag[i].addEventListener('click',function(event){event.preventDefault();
 
     function para_print1(event)
     {
-        if(event.target.nodeName==="SPAN"){
-            console.log(event.target.textContent);}
+        if(event.target.nodeName!=="SPAN"){
+            console.log(event.target.textContent);
+            return;
+        }
+     
+        
+
+
         
     }
 
@@ -125,3 +131,27 @@ document.body.appendChild(mydiv);
 
 
 // speed mesure
+
+// let t1=performance.now();
+// for(let i=0;i<100;i++)
+// {
+//     let para=document.createElement('p');
+//     para.textContent="hi darshan soni"+1;
+//     document.body.appendChild(para);
+// }
+// let t2=performance.now();
+// console.log(t2-t1);
+
+// let div=document.createElement('div');
+// console.log("little optimize");
+// let t3=performance.now();
+// for(let i=0;i<100;i++)
+// {
+//     let para=document.createElement('p');
+//     para.textContent="hi darshan soni"+1;
+//     div.appendChild(para);
+    
+// }
+// document.body.appendChild(div);
+// let t4=performance.now();
+// console.log(t3-t4);
