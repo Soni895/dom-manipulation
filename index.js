@@ -182,3 +182,40 @@ console.log(arr);
 console.log(Math.min(...arr));
 
 // js is a single threading lanuage
+// js is synchronous
+// call stack
+
+function create_element()
+{
+    let content=document.createElement("p");
+    content.textContent='hi darshan';
+    document.body.appendChild(content);
+    return content;
+}
+function create_element1(i)
+{
+    let content1=document.createElement("p");
+    let content2=document.createElement("p");
+    content1.textContent='hi kumar';
+    content2.textContent='hi puneet HI';
+    document.body.appendChild(content1);
+    document.body.appendChild(content2);
+    if(i==1)
+    return [content1,content2];
+    else
+    {
+        return [content2];
+        
+    }
+}
+
+let content=create_element();
+console.log("after invoke create_element");
+console.log(content.textContent);
+let [content1,content2]=create_element1(1);
+let [content3]=create_element1(0);
+console.log("single content")
+console.log(content3.textContent);
+
+console.log("after invoke create_element1");
+console.log(content1.textContent,content2.textContent);
