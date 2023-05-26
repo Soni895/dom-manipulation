@@ -133,7 +133,7 @@ document.body.appendChild(mydiv);
 // speed mesure
 
 let t1=performance.now();
-for(let i=0;i<10000;i++)
+for(let i=0;i<5;i++)
 {
     let para=document.createElement('p');
     para.textContent="hi darshan soni"+1;
@@ -147,7 +147,7 @@ console.log(t2-t1);
 let div=document.createElement('div');
 console.log("little optimize");
 let t3=performance.now();
-for(let i=0;i<10000;i++)
+for(let i=0;i<5;i++)
 {
     let para=document.createElement('p');
     para.textContent="hi darshan soni"+1;
@@ -164,7 +164,7 @@ console.log(t4-t3);
 let t5=performance.now();
 let  fregment=document.createDocumentFragment();
 
-for(let i=0;i<10000;i++)
+for(let i=0;i<5;i++)
 {
     let para=document.createElement('p');
     para.textContent="hi kake"+i;
