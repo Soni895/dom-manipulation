@@ -156,3 +156,4 @@ document.body.appendChild(div);
 let t4=performance.now();
 console.log(t4-t3);
 
+//  DocumentFragment
