@@ -122,3 +122,6 @@ for(let i=0;i<5;i++)
 
 }
 document.body.appendChild(mydiv);
+
+
+// speed mesure
