@@ -25,7 +25,7 @@ print=function ()
 
 
 // way3
-document.addEventListener('click',print);
+// document.addEventListener('click',print);
 // var classname = document.getElementsByClassName("name");
 
 // var myFunction = function() {
@@ -36,12 +36,12 @@ document.addEventListener('click',print);
 // classname.addEventListener('click', myFunction, false);
 
 
-function print()
-{
+// function print()
+// {
 
-    console.log("hi darshan soni");
-}
-// const content=document.querySelector(".Name");
+//     console.log("hi darshan soni");
+// }
+// const content=document.querySelector(".name");
 // content.addEventListener('click',function(event)
 // {
 //     console.log(event);
@@ -49,20 +49,31 @@ function print()
 
 // remove listner 
 
-document.removeEventListener('click',print);
+// document.removeEventListener('click',print);
 
 // the default action
 let alltag=document.querySelectorAll("a");
-let tag=alltag[2];
+// let tag=alltag[2];
 // tag.addEventListener('click',function(event)
 // {
 //     event.preventDefault();
 //     console.log("not allowed illegal action deny");
 
 // });
+for(let i=0;i<alltag.length;i++)
+{
+alltag[i].addEventListener('click',function(event){event.preventDefault();
+     console.log("not allowed illegal action deny");
+     console.log(event.target.textContent);
+     console.log(typeof alltag);});
+    
 
-// content.addEventListener('click',function(event){event.preventDefault();
-//      console.log("not allowed illegal action deny")});
+}
+
+
+
+
+
 
 
 // little optimize
@@ -74,7 +85,9 @@ let tag=alltag[2];
 
     function para_print1(event)
     {
-        console.log("inside the event listner"+event.target.textContent);
+        if(event.target.nodeName==="SPAN"){
+            console.log(event.target.textContent);}
+        
     }
 
 
@@ -83,7 +96,7 @@ let tag=alltag[2];
 mydiv.addEventListener('click',para_print1);
 
 
-for(let i=0;i<100;i++)
+for(let i=0;i<5;i++)
 {
     let para=document.createElement('p');
     para.textContent="this is para no:-"+i;
@@ -94,6 +107,18 @@ for(let i=0;i<100;i++)
 //     para_print(i);
 // });
     mydiv.appendChild(para);
+
+}
+for(let i=0;i<5;i++)
+{
+    let para_tag=document.createElement('p');
+    para_tag.textContent="inside the P tag ";
+    let span_tag=document.createElement('span');
+    span_tag.textContent="inside the SPAN tag";
+    para_tag.appendChild(span_tag);
+    mydiv.appendChild(para_tag);
+    
+
 
 }
 document.body.appendChild(mydiv);
