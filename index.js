@@ -222,3 +222,10 @@ console.log(content1.textContent,content2.textContent);
 
 
 // settime out
+
+setTimeout(() => {
+    console.log("hi darshan soni");
+    
+}, 5000);
+setTimeout(()=>console.log("hi darshan soni"),
+2000);
