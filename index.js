@@ -133,19 +133,21 @@ document.body.appendChild(mydiv);
 // speed mesure
 
 let t1=performance.now();
-for(let i=0;i<100;i++)
+for(let i=0;i<10000;i++)
 {
     let para=document.createElement('p');
     para.textContent="hi darshan soni"+1;
     document.body.appendChild(para);
 }
+
 let t2=performance.now();
+let ans1=t2-t1;
 console.log(t2-t1);
 
 let div=document.createElement('div');
 console.log("little optimize");
 let t3=performance.now();
-for(let i=0;i<100;i++)
+for(let i=0;i<10000;i++)
 {
     let para=document.createElement('p');
     para.textContent="hi darshan soni"+1;
@@ -154,6 +156,27 @@ for(let i=0;i<100;i++)
 }
 document.body.appendChild(div);
 let t4=performance.now();
+let ans2=t4-t3;
 console.log(t4-t3);
 
-//  DocumentFragment
+//   using DocumentFragment
+
+let t5=performance.now();
+let  fregment=document.createDocumentFragment();
+
+for(let i=0;i<10000;i++)
+{
+    let para=document.createElement('p');
+    para.textContent="hi kake"+i;
+    fregment.appendChild(para);
+    
+}
+document.body.appendChild(fregment); //single reflow and single repaint
+let t6=performance.now();
+let ans3=t6-t5;
+// or optimize
+console.log(ans3);
+let arr=[];
+arr.push(ans1,ans2,ans3);
+console.log(arr);
+console.log(Math.min(...arr));
