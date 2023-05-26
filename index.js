@@ -65,22 +65,22 @@ let tag=alltag[2];
 //      console.log("not allowed illegal action deny")});
 
 
-
+// little optimize
 
 // function para_print(i)
 //     {
 //         console.log("inside the event listner",i);
 //     }
 
-    // function para_print1(event)
-    // {
-    //     console.log("inside the event listner"+event.target.textContent);
-    // }
+    function para_print1(event)
+    {
+        console.log("inside the event listner"+event.target.textContent);
+    }
 
 
     let mydiv=document.createElement("div");
 //    add listner to div
-// mydiv.addEventListener('click',para_print1);
+mydiv.addEventListener('click',para_print1);
 
 
 for(let i=0;i<100;i++)
