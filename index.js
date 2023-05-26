@@ -180,3 +180,5 @@ let arr=[];
 arr.push(ans1,ans2,ans3);
 console.log(arr);
 console.log(Math.min(...arr));
+
+// js is a single threading lanuage
