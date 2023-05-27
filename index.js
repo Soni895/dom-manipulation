@@ -221,7 +221,7 @@ console.log("after invoke create_element1");
 console.log(content1.textContent,content2.textContent);
 
 
-// settime out
+// settimeout
 
 setTimeout(() => {
     console.log("hi darshan soni");
