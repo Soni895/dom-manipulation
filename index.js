@@ -333,29 +333,31 @@
 
 
 
-// async function print()
-// {
-//     console.log("async fun call");
-// }
-// print();
+async function print()
+{
+    console.log("async fun call");
+  return "darshan soni";
+  
+}
+print();
 
 
 
-//   async function delay()
-// {
-//     setTimeout(() => {
-//         console.log("before time out");
+  async function delay()
+{
+    setTimeout(() => {
+        console.log("before time out");
 
         
-//     }, 2000);
-//     console.log("hi darshan soni");
-//  setTimeout(() => {
-//     console.log("after time out");
+    }, 2000);
+    console.log("hi darshan soni");
+ setTimeout(() => {
+    console.log("after time out");
     
-// }, 2000);
-// }
+}, 2000);
+}
 
-// delay();
+delay();
 
 
 
@@ -395,11 +397,11 @@
 // }
 // api();
 
-fetch('https://jsonplaceholder.ir/users', {
-  method: 'GET',
-})
-  .then(response => response.json())
-  .then(json => console.log(json))
+// fetch('https://jsonplaceholder.ir/users', {
+//   method: 'GET',
+// })
+//   .then(response => response.json())
+//   .then(json => console.log(json))
 
 
 
