@@ -402,4 +402,4 @@ fetch('https://jsonplaceholder.ir/users', {
   .then(json => console.log(json))
 
 
-//   closers in js
+
