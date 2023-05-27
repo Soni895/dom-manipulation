@@ -2,10 +2,10 @@
 
 // fatch element by id
 
-print=function ()
-{
-    console.log("event listner hare") ;
-}
+// print=function ()
+// {
+//     console.log("event listner hare") ;
+// }
 // let heading = document.querySelector('h1');
 // heading.log(heading);
 
@@ -234,6 +234,8 @@ print=function ()
 
 
 
+
+
 // asynchronous
 
 // let promise1= new Promise(function(resolve,reject)
@@ -243,9 +245,8 @@ print=function ()
         
 //     }, 3000);
 //     resolve("sussesfully executed");
-
-
 // });
+// console.log(promise1);
 // let promise2= new Promise(function(resolve,reject)
 // {
 //     setTimeout(function() {
@@ -257,6 +258,7 @@ print=function ()
     
 
 // });
+// console.log(promise2);
 
 // let promise3= new Promise(function(resolve,rejection)
 // {
@@ -264,11 +266,12 @@ print=function ()
 //         console.log("inside promise 3");
         
 //     }, 5000);
-//     resolve("sussesfully executed");
-//     // rejection(new Error("unsuccessfull execution"));
+//     // resolve("sussesfully executed");
+//     rejection(new Error("unsuccessfull execution"));
 
 
 // });
+// console.log(promise3);
 
 
 // then and catch
@@ -277,10 +280,14 @@ print=function ()
 //    console.log(value);
 
 // }
-
-
 // );
+
+
 // promise3.catch(error=>{console.log (new Error("unsuccessfull execution"))});
+// promise3.catch(function(error)
+// {
+//     console.log(new Error("unsuccessfull execution")); 
+// });
 
 
 // promise3.then(successfully executed,error)   generagl syntax not acode
@@ -292,44 +299,58 @@ print=function ()
  
 //  },
 // error=>{console.log (new Error("unsuccessfull execution"))},
-
-
-
 //  );
 
 
 //  multiple promise
 
 
-let promise=new Promise(function(resolve,reject)
-{
-    setTimeout(() => {
-        console.log("hi darshan inside promise");
+// let promise=new Promise(function(resolve,reject)
+// {
+//     setTimeout(() => {
+//         console.log("hi darshan inside promise");
         
-    }, 2000);
-    resolve("successfull promise");
-});
-let output=promise.then((value)=>{
-    console.log(value);
-    let promise1=new Promise(function(resolve,reject)
-{
-    setTimeout(() => {
-        console.log("hi darshan inside promis1");
+//     }, 2000);
+//     resolve("successfull promise");
+// });
+// let output=promise.then((value)=>{
+//     console.log(value);
+//     let promise1=new Promise(function(resolve,reject)
+// {
+//     setTimeout(() => {
+//         console.log("hi darshan inside promis1");
         
-    }, 2000);
-    resolve("successfull promise1");
-    return promise1;
+//     }, 2000);
+//     resolve("successfull promise1");
+//     return promise1;
     
 
-}
-    );
+// }
+//     );
 
-});
-output.then(value=>console.log("output value is"+value));
+// });
+// output.then(value=>console.log("output value is"+value));
 
 
 // async and await keyword
 
 
+// async function print()
+// {
+//     console.log("async fun call");
+// }
+// print();
 
 
+let DM=new Promise(function(resolve,reject){
+    setTimeout(()=> {
+        resolve("delhi temp is 45 deg");
+} ,2000);
+
+});
+
+let hyd= new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("hyderabad temp is 30 deg");
+    },3000);
+});
