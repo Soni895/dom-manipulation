@@ -298,4 +298,7 @@ error=>{console.log (new Error("unsuccessfull execution"))},
  );
 
 
+//  multiple promise
+
+
 
