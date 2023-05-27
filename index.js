@@ -362,28 +362,41 @@
 
 // async and await keyword
 
-async function get_temp()
-{
+// async function get_temp()
+// {
 
-  let DM=new Promise(function(resolve,reject){
-    setTimeout(()=> {
-        resolve("delhi temp is 45 deg");
-} ,1000);
+//   let DM=new Promise(function(resolve,reject){
+//     setTimeout(()=> {
+//         resolve("delhi temp is 45 deg");
+// } ,1000);
 
-});
+// });
 
-let hyd=new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve("hyderabad temp is 30 deg");
-    },1000);
-});
-let  delhi_temp= await DM;
-let  Hyderabad_temp= await hyd;
-return [delhi_temp,Hyderabad_temp];
-}
+// let hyd=new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("hyderabad temp is 30 deg");
+//     },1000);
+// });
+// let  delhi_temp= await DM;
+// let  Hyderabad_temp= await hyd;
+// return [delhi_temp,Hyderabad_temp];
+// }
 
-// let result=get_temp();
-//  console.log( result);
+// // let result=get_temp();
+// //  console.log( result);
 
 
-// fetch api
+// // fetch api
+// async function api()
+// {
+// let api= await fetch("https://api.coinbase.com/v2/currencies");
+// let content=await api.text();
+// console.log(content);
+// }
+// api();
+
+fetch('https://jsonplaceholder.ir/users', {
+  method: 'GET',
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
