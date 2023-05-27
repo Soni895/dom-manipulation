@@ -328,4 +328,8 @@ let output=promise.then((value)=>{
 output.then(value=>console.log("output value is"+value));
 
 
+// async and await keyword
+
+
+
 
