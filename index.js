@@ -384,3 +384,6 @@ return [delhi_temp,Hyderabad_temp];
 
 // let result=get_temp();
 //  console.log( result);
+
+
+// fetch api
