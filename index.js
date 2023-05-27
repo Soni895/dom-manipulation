@@ -362,24 +362,25 @@
 
 // async and await keyword
 
-// async function get_temp()
-// {
+async function get_temp()
+{
 
-//   let DM=  new Promise(function(resolve,reject){
-//     setTimeout(()=> {
-//         resolve("delhi temp is 45 deg");
-// } ,5000);
+  let DM=new Promise(function(resolve,reject){
+    setTimeout(()=> {
+        resolve("delhi temp is 45 deg");
+} ,1000);
 
-// });
+});
 
-// let hyd= new Promise((resolve,reject)=>{
-//     setTimeout(()=>{
-//         resolve("hyderabad temp is 30 deg");
-//     },5000);
-// });
-
-// return [DM,hyd];
-// }
+let hyd=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve("hyderabad temp is 30 deg");
+    },1000);
+});
+let  delhi_temp= await DM;
+let  Hyderabad_temp= await hyd;
+return [delhi_temp,Hyderabad_temp];
+}
 
 // let result=get_temp();
 //  console.log( result);
