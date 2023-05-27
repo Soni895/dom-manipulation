@@ -229,3 +229,6 @@ setTimeout(() => {
 }, 5000);
 setTimeout(()=>console.log("hi darshan soni"),
 2000);
+
+
+// asynchronous
