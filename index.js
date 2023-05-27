@@ -400,3 +400,6 @@ fetch('https://jsonplaceholder.ir/users', {
 })
   .then(response => response.json())
   .then(json => console.log(json))
+
+
+//   closers in js
