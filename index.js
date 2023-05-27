@@ -223,10 +223,10 @@ print=function ()
 
 // settimeout
 
-setTimeout(() => {
-    console.log("hi darshan soni");
+// setTimeout(() => {
+//     console.log("hi darshan soni");
     
-}, 1000);
+// }, 1000);
 
 
 
@@ -236,24 +236,66 @@ setTimeout(() => {
 
 // asynchronous
 
-let promise1= new Promise(function(resolve,reject)
-{
-    setTimeout(function() {
-        console.log("inside promise1");
+// let promise1= new Promise(function(resolve,reject)
+// {
+//     setTimeout(function() {
+//         console.log("inside promise1");
         
-    }, 3000);
-    resolve("sussesfully executed");
+//     }, 3000);
+//     resolve("sussesfully executed");
 
 
-});
-let promise2= new Promise(function(resolve,reject)
-{
-    setTimeout(function() {
-        console.log("inside promise 2");
+// });
+// let promise2= new Promise(function(resolve,reject)
+// {
+//     setTimeout(function() {
+//         console.log("inside promise 2");
         
-    }, 5000);
-    // resolve("sussesfully executed");
-    reject("unsuccessfull execution");
+//     }, 5000);
+//     // resolve("sussesfully executed");
+//     reject("unsuccessfull execution");
     
 
+// });
+
+let promise3= new Promise(function(resolve,rejection)
+{
+    setTimeout(function() {
+        console.log("inside promise 3");
+        
+    }, 5000);
+    resolve("sussesfully executed");
+    // rejection(new Error("unsuccessfull execution"));
+
+
 });
+
+
+// then and catch
+
+// promise3.then((value)=>{
+//    console.log(value);
+
+// }
+
+
+// );
+// promise3.catch(error=>{console.log (new Error("unsuccessfull execution"))});
+
+
+// promise3.then(successfully executed,error)   generagl syntax not acode
+
+promise3.then(
+    value=>
+{
+    console.log(value);
+ 
+ },
+error=>{console.log (new Error("unsuccessfull execution"))},
+
+
+
+ );
+
+
+
