@@ -332,8 +332,6 @@
 // output.then(value=>console.log("output value is"+value));
 
 
-// async and await keyword
-
 
 // async function print()
 // {
@@ -342,15 +340,46 @@
 // print();
 
 
-let DM=new Promise(function(resolve,reject){
-    setTimeout(()=> {
-        resolve("delhi temp is 45 deg");
-} ,2000);
 
-});
+//   async function delay()
+// {
+//     setTimeout(() => {
+//         console.log("before time out");
 
-let hyd= new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        resolve("hyderabad temp is 30 deg");
-    },3000);
-});
+        
+//     }, 2000);
+//     console.log("hi darshan soni");
+//  setTimeout(() => {
+//     console.log("after time out");
+    
+// }, 2000);
+// }
+
+// delay();
+
+
+
+
+// async and await keyword
+
+// async function get_temp()
+// {
+
+//   let DM=  new Promise(function(resolve,reject){
+//     setTimeout(()=> {
+//         resolve("delhi temp is 45 deg");
+// } ,5000);
+
+// });
+
+// let hyd= new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         resolve("hyderabad temp is 30 deg");
+//     },5000);
+// });
+
+// return [DM,hyd];
+// }
+
+// let result=get_temp();
+//  console.log( result);
