@@ -258,17 +258,17 @@ print=function ()
 
 // });
 
-let promise3= new Promise(function(resolve,rejection)
-{
-    setTimeout(function() {
-        console.log("inside promise 3");
+// let promise3= new Promise(function(resolve,rejection)
+// {
+//     setTimeout(function() {
+//         console.log("inside promise 3");
         
-    }, 5000);
-    resolve("sussesfully executed");
-    // rejection(new Error("unsuccessfull execution"));
+//     }, 5000);
+//     resolve("sussesfully executed");
+//     // rejection(new Error("unsuccessfull execution"));
 
 
-});
+// });
 
 
 // then and catch
@@ -285,20 +285,48 @@ let promise3= new Promise(function(resolve,rejection)
 
 // promise3.then(successfully executed,error)   generagl syntax not acode
 
-promise3.then(
-    value=>
-{
-    console.log(value);
+// promise3.then(
+//     value=>
+// {
+//     console.log(value);
  
- },
-error=>{console.log (new Error("unsuccessfull execution"))},
+//  },
+// error=>{console.log (new Error("unsuccessfull execution"))},
 
 
 
- );
+//  );
 
 
 //  multiple promise
+
+
+let promise=new Promise(function(resolve,reject)
+{
+    setTimeout(() => {
+        console.log("hi darshan inside promise");
+        
+    }, 2000);
+    resolve("successfull promise");
+});
+let output=promise.then((value)=>{
+    console.log(value);
+    let promise1=new Promise(function(resolve,reject)
+{
+    setTimeout(() => {
+        console.log("hi darshan inside promis1");
+        
+    }, 2000);
+    resolve("successfull promise1");
+    return promise1;
+    
+
+}
+    );
+
+});
+
+output.then(value=>console.log("output value is"+value));
 
 
 
