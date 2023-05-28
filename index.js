@@ -383,8 +383,8 @@ let  Hyderabad_temp= await hyd;
 return [delhi_temp,Hyderabad_temp];
 }
 
-let [result1,result2]=get_temp();
- console.log( resull1,result2);
+// let [result1,result2]=get_temp();
+//  console.log( resull1,result2);
 
 
 // // fetch api
