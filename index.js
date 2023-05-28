@@ -389,19 +389,19 @@ delay();
 
 
 // // fetch api
-// async function api()
-// {
-// let api= await fetch("https://api.coinbase.com/v2/currencies");
-// let content=await api.text();
-// console.log(content);
-// }
-// api();
+async function api()
+{
+let api= await fetch("https://api.coinbase.com/v2/currencies");
+let content=await api.text();
+console.log(content);
+}
+api();
 
-// fetch('https://jsonplaceholder.ir/users', {
-//   method: 'GET',
-// })
-//   .then(response => response.json())
-//   .then(json => console.log(json))
+fetch('https://jsonplaceholder.ir/users', {
+  method: 'GET',
+})
+  .then(response => response.json())
+  .then(json => console.log(json))
 
 
 
