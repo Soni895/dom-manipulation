@@ -373,7 +373,6 @@ async function get_temp()
 } ,1000);
 
 });
-
 let hyd=new Promise((resolve,reject)=>{
     setTimeout(()=>{
         resolve("hyderabad temp is 30 deg");
