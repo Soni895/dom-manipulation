@@ -384,8 +384,8 @@ delay();
 // return [delhi_temp,Hyderabad_temp];
 // }
 
-// // let result=get_temp();
-// //  console.log( result);
+let [result1,result2]=get_temp();
+ console.log( resull1,result2);
 
 
 // // fetch api
