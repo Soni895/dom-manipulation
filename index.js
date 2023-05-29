@@ -391,7 +391,7 @@ return [delhi_temp,Hyderabad_temp];
 async function api()
 {
 let api= await fetch("https://api.coinbase.com/v2/currencies");
-let content=await api.json();
+let content=await api.txt();
 console.log(content);
 }
 api();
